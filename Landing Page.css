@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(237, 28, 36, 1);
+    font-family: "Mitr", sans-serif; 
+}
+
+                                        /* HEADERRRRR ! */
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f8f8f8;
+    flex-wrap: wrap; 
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    gap: 10px;
+    flex: 1; 
+    justify-content: flex-start;
+    margin-left: 10px;
+    margin: 20px ;
+}
+
+.logo-container img {
+    height: 50px;
+    width: auto;
+    max-width: 100%; 
+}
+
+.nav-menu {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.nav-menu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+} 
+
+.nav-menu ul li {
+    margin: 10 15px;
+} 
+
+.nav-menu ul li .link{
+    text-decoration: none;
+    font-weight: 500;
+    color: #000;
+    padding-bottom: 5px;
+    margin: 0 25px;
+    
+}
+
+.link:hover, .active{
+    border-bottom: 2px solid #000000;
+}
+
+.nav-button .white-btn {
+    font-family: "Mitr", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-weight: 500;
+    width: 130px;
+    height: 40px;
+    background: rgba(160, 193, 255, 0.733);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-right: 20px;
+}
+
+.nav-button .white-btn:hover {
+    background: rgba(225, 225, 225, 0.7);
+}
+
+                        /* MAINN!! */
+
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&family=Modak&display=swap');
+
+.circle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 50vw; 
+    max-width: 614px;
+    max-height: 614px;
+    background-color: white;
+    border-radius: 100%; 
+    position: relative; 
+    overflow: hidden; 
+    flex-shrink: 0;
+}
+
+.circle-image {
+    width: 90%; 
+    height: 90%;
+    position: absolute; 
+    top: 50%; 
+    left: 58%;
+    transform: translate(-50%, -50%); 
+    object-fit: cover; 
+}
+
+.row {
+    margin: 0; 
+} 
+
+.content-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    margin-top: 50px;
+    gap: 30px;
+}
+
+.promotion-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.available-text {
+    font-family: "Mitr", sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+.brand-section {
+    justify-content: flex-start; 
+    display: flex;
+    flex-direction: column; 
+    gap: 40px;
+}
+.available-on-gofood-section{
+    display: flex;
+    gap : 50px;
+    align-items: center;
+}
+
+.gofood-logo-container {
+    background-color: white;
+    padding: 20px;
+    max-width: 255px;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gofood-logo-container:hover, .active{
+    background: rgba(238, 237, 237, 0.904);
+}
+
+.gofood-logo-container img {
+    width: 100%;
+    height: auto;
+}
+
+.main-title {
+    font-family: "Modak", serif;
+    font-weight: 400;
+    font-size: 64px;
+    color: #ffffff;
+    text-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+    font-family: "Modak", serif;
+    font-weight: 400;
+    font-size: 40px;
+    color: #ffffff;
+    text-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+                             /* RESPONSIVE DISP FUNC  */
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .nav {
+        flex-direction: column; 
+        width: 100%; 
+    }
+
+    .nav-menu ul {
+        flex-direction: column; 
+        align-items: flex-start; 
+        padding: 0; 
+        width: 100%; 
+    }
+
+    .nav-menu ul li {
+        margin: 10px 0; 
+    }
+
+    .nav button.white-btn {
+        width: 100%; 
+        margin-top: 10px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-container img {
+        height: 40px; 
+    }
+
+    .nav-menu ul li {
+        margin: 5px 0; 
+    }
+
+    .nav button.white-btn {
+        height: 35px; 
+    }
+}
+
+@media (max-width: 991.98px) { 
+    .nav-menu ul li .link {
+        margin: 0 10px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .promotion-section {
+        align-items: center;
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    .promotion-section {
+        align-items: center;
+        justify-content: center;
+        white-space: normal;
+    }
+
+    .brand-section {
+        gap: 15px; 
+        justify-content: center; 
+    }
+
+    .available-text {
+        font-size: 28px; 
+    }
+
+    .main-title {
+        font-size: 48px;
+    }
+
+    .subtitle {
+        font-size: 30px;
+    }
+
+    .gofood-logo-container {
+        max-width: 180px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .available-text {
+        font-size: 28px;
+    }
+
+    .main-title {
+        font-size: 48px;
+    }
+
+    .subtitle {
+        font-size: 30px;
+    }
+
+    .gofood-logo-container {
+        max-width: 180px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .available-text {
+        font-size: 24px;
+    }
+
+    .main-title {
+        font-size: 36px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+    .gofood-logo-container {
+        max-width: 140px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .circle-container {
+        width: 50vw; 
+        height: 50vw; 
+    }
+
+    .circle-image {
+        width: 80%; 
+        height: 80%;
+    }
+
+    .gofood-logo-container {
+        max-width: 180px; 
+        padding: 10px;
+    }
+
+    .promotion-section {
+        align-items: center;
+        text-align: center;
+    }
+
+    .available-text {
+        font-size: 30px; 
+    }
+
+    .main-title {
+        font-size: 52px; 
+    }
+
+    .subtitle {
+        font-size: 36px;
+    }
+
+}
+
+
+
+
+
+
+
