@@ -87,3 +87,44 @@ document.querySelector('.make-order-btn').addEventListener('click', function(eve
         alert("Your cart is empty! Please add items to your cart before proceeding.");
     }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const orderButton = document.querySelector('.make-order-btn');
+    const dateInput = document.querySelector('input[name="reservation_time"]');
+    const totalPriceElement = document.getElementById('total-price');
+
+    function formatDate(dateString) {
+        const date = new Date(dateString);
+        return date.toLocaleString('en-US', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+            hour12: true
+        });
+    }
+
+    function validateOrder() {
+        const reservationTime = dateInput.value;
+        if (!reservationTime) {
+            alert("Please fill in the date and time for delivery.");
+            return false;
+        }
+
+        const formattedReservationTime = formatDate(reservationTime);
+
+        const totalPrice = totalPriceElement.textContent;
+        const confirmationMessage = `You are ordering for ${formattedReservationTime}.\nTotal price: ${totalPrice}\nDo you want to proceed?`;
+
+        const proceed = confirm(confirmationMessage);
+        return proceed;
+    }
+
+    orderButton.addEventListener('click', function(event) {
+        if (!validateOrder()) {
+            event.preventDefault();
+        }
+    });
+});
