@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&family=Modak&display=swap');
+
+.circle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 50vw; 
+    max-width: 614px;
+    max-height: 614px;
+    background-color: white;
+    border-radius: 100%; 
+    position: relative; 
+    overflow: hidden; 
+    flex-shrink: 0;
+}
+
+.circle-image {
+    width: 90%; 
+    height: 90%;
+    position: absolute; 
+    top: 50%; 
+    left: 58%;
+    transform: translate(-50%, -50%); 
+    object-fit: cover; 
+}
+
+.row {
+    margin: 0; 
+} 
+
+.content-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    margin-top: 50px;
+    gap: 30px;
+}
+
+.menu{
+    display: grid;
+    align-content: space-evenly;
+    row-gap: 35px;
+}
+
+.button {
+    background-color: whitesmoke;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 32px;
+    border-radius: 45px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 342px;
+    height: 63px;
+    display: block;
+    justify-items: center;
+    margin-right: 10px;
+}
+
+.button:hover {
+    background-color: #6CB8EF;
+    color: white;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+}
+
+.plain {
+    text-decoration-line: none;
+    color: black;
+    gap: 10px;
+}
+
+                        /* RESPONSIVE DISP FUNC  */
+                        
+@media (max-width: 1024px) {
+.content-container {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.circle-container {
+    width: 60vw;
+    height: 60vw;
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.button {
+    width: 300px;
+    height: 55px;
+    font-size: 28px;
+}
+}
+
+@media (max-width: 768px) {
+.circle-container {
+    width: 70vw;
+    height: 70vw;
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.content-container {
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.menu {
+    row-gap: 25px;
+}
+
+.button {
+    width: 250px;
+    height: 50px;
+    font-size: 24px;
+}
+
+.circle-image {
+    width: 85%;
+    height: 85%;
+}
+}
+
+@media (max-width: 480px) {
+.circle-container {
+    width: 80vw;
+    height: 80vw;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.button {
+    width: 200px;
+    height: 45px;
+    font-size: 20px;
+}
+
+.content-container {
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.menu {
+    row-gap: 20px;
+}
+
+.plain {
+    font-size: 14px;
+}
+}
+
+
+
+
+
+

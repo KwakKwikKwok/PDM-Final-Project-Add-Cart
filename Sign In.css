@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap');
 
-body {
-    margin: 0;
-    padding: 0;
-    background-color: rgba(237, 28, 36, 1);
-    font-family: "Mitr", sans-serif;
-}
-
 .header-container {
     display: flex;
     align-items: center;
@@ -187,17 +180,16 @@ header{
     top: -35px;
     color: #fff;
 }
-
-/* .input-box {
-    position:relative;
-    width: 100%;
-} */
-
 .input-box {
     position: relative;
     display: flex;
     align-items: center;
     width: 100%;
+}
+
+
+input.submit {
+    display: inline-block;
 }
 
 .submit {
@@ -220,58 +212,23 @@ header{
     box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
 }
 
-/* ISENGGG */
+a {
+    display: flex;
+    justify-content: center;
+}
+
+.plain {
+    text-decoration-line: none;
+    color: black;
+}
+
+a.plain {
+    width: 200px;
+}
+
 .eye-icon {
     position: absolute;
     right: 10px;
     cursor: pointer;
     font-size: 18px;
-}
-
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .nav-menu ul {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0;
-        width: 100%;
-    }
-
-    .nav-menu ul li {
-        margin: 10px 0;
-    }
-
-    .nav button.white-btn {
-        width: 100%;
-        margin-top: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo-container img {
-        height: 40px;
-    }
-
-    .nav-menu ul li {
-        margin: 5px 0;
-    }
-
-    .nav button.white-btn {
-        height: 35px;
-    }
-}
-
-@media (max-width: 991.98px) {
-    .nav-menu ul li .link {
-        margin: 0 10px;
-    }
 }

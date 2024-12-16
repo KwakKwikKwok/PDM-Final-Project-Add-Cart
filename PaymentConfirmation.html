@@ -13,7 +13,7 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
         crossorigin="anonymous"
         />
-        <link rel="stylesheet" href="Landing Page.css" />
+        <link rel="stylesheet" href="PaymentConfirmation.css" />
         <link rel="stylesheet" href="Navbar.css" />
         <link rel="icon" href="Assets/Logo/Logo-Tab.png" type="image/png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +27,7 @@
 
     <body>
         <header>
-            <!-- place navbar here -->
+            <!-- NAVBAR -->
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
                     <div class="logo-container">
@@ -55,36 +55,22 @@
               </nav> 
         </header>
         <main>
-            <div class="container mt-4">
-                <div class="row">
-                    <div class="col-md-12"> 
-                        <div class="content-container">
-                            <div class="circle-container">
-                                <img src="Assets/Logo/HomeResto.png" alt="Home Resto Logo" class="circle-image">
-                            </div>
-                            <div class="promotion-section">
-                                <div class="brand-section">
-                                    <div class="available-on-gofood-section">
-                                        <span class="available-text">Available on</span>
-                                        <a href="https://r.grab.com/g/2-1-6-C6TUTFTCCNKYUA">
-                                            <div class="gofood-logo-container">
-                                                <img src="Assets/Logo/GrabFood.png" alt="GoFood">
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <h1 class="main-title">Master Home Resto</h1>
-                                    <h3 class="subtitle">By Easter Kitchen</h3>
-                                </div>
-                            </div>
-                        </div> 
+            <div class="main-box">
+                    <div class="header">
+                        <h1 class="title">Upload Payment Confirmation</h1>
                     </div>
+                    <div class="upload-box">
+                        <div class="upload-file-button">
+                            <img src="Assets/Icon/Upload.png" class="upload-icon">
+                            <div class="upload-file">Upload File</div>
+                        </div>
+                        <button class="delete-btn btn btn-danger btn-sm" style="display: none;">Delete</button>
+                    </div>
+                    <a href="ThankYouPage.html">
+                        <button class="done">Done</button>
+                    </a>
                 </div>
-            </div>
         </main>
-        <footer>
-            <!-- place footer here -->
-        </footer>
-        <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
             integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -96,5 +82,7 @@
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"
         ></script>
+
+        <script src="PaymentConfirmation.js"></script>
     </body>
 </html>

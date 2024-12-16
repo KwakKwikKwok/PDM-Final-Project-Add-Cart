@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&family=Modak&display=swap');
+
+
+.container {
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.heading-container{
+    display: flex;
+    background-color: #F3F3F3;
+    border-radius: 64px;
+    height: 126px;
+    width: 806px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;    
+}
+
+.heading {
+    font-family: "Modak";
+    font-size: 64px;
+    color: #303030;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 0;
+    padding: 20px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 50px;
+}
+
+.card {
+    background-color: #F3F3F3;
+    border-radius: 58px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 456px;
+    height: 456px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:hover{
+    background:gainsboro;
+}
+
+.card .Qris{
+    width: 218px;
+    height: auto;
+    padding-bottom: 30px;
+}
+.card .GPN{
+    width: 61px;
+    height: auto;
+    padding-bottom: 10px;
+}
+.card .GoPay{
+    width: 107px;
+    height: auto;
+}
+.card .OVO{
+    width: 74px;
+    height: auto;
+}
+.card .Dana{
+    width: 80px;
+    height: auto;
+}
+.card .BCA{
+    width: 120px;
+    height: auto;
+}
+
+.card .mandiri{
+    width: 120px;
+    height: auto;
+}
+.card .niaga{
+    width: 200px;
+    height: auto;
+}
+
+.card .BNI{
+    width: 107px;
+    height: auto;
+}
+
+.card .BRI{
+    width: 107px;
+    height: auto;
+}
+
+.card h2 {
+    font-size: 55px;
+    font-family: "Mitr", medium;
+    color: #303030;
+    margin-bottom: 20px;
+}
+
+.plain{
+    text-decoration-line: none;
+}
+
+.logo-box {
+    background-color: #FFFFFF;
+    border-radius: 32px;
+    width: 343px;
+    height: 226px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container{
+    display: block;
+}
+
+
+.logos-3{
+    display: grid;
+    grid-template-columns: 150px 110px;
+    row-gap: 10px;
+}
+
+.logo-container-1{
+    padding: 70px 0 0 0;
+    display: grid;
+    grid-template-rows: 100px 100px;
+    justify-content: space-between;
+}
+
+.card .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card .logo-container .logos-1 {
+    margin-bottom: 10px;
+}
+
+
+
+.card .logo-container .logos-2 img {
+    margin: 0 2px;
+}
+
+                        /* RESPONSIVE DISP FUNC  */
+
+@media (max-width: 1024px) {
+    .heading-container {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+    
+    .heading {
+        font-size: 48px;
+        padding: 15px;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding-top: 30px;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 450px;
+        height: auto;
+    }
+
+    .card .Qris {
+        width: 100%;
+        max-width: 160px;
+    }
+
+    .card .GPN {
+        width: 55px;
+    }
+
+    .card .GoPay,
+    .card .OVO,
+    .card .Dana,
+    .card .BCA,
+    .card .mandiri,
+    .card .niaga,
+    .card .BNI,
+    .card .BRI {
+        width: 90%;
+        max-width: 130px;
+    }
+
+    .logo-box {
+        width: 80%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .heading {
+        font-size: 40px;
+        padding: 15px;
+    }
+
+    .card-container {
+        flex-direction: column;
+        gap: 25px;
+        padding-top: 20px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    .card .Qris {
+        width: 100%;
+        max-width: 140px;
+    }
+
+    .card .GPN {
+        width: 50px;
+    }
+
+    .card .GoPay,
+    .card .OVO,
+    .card .Dana,
+    .card .BCA,
+    .card .mandiri,
+    .card .niaga,
+    .card .BNI,
+    .card .BRI {
+        width: 80%;
+        max-width: 100px;
+    }
+
+    .logo-box {
+        width: 90%;
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading {
+        font-size: 32px;
+        padding: 10px;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding-top: 15px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 360px;
+        height: auto;
+    }
+
+    .card .Qris {
+        width: 100%;
+        max-width: 120px;
+    }
+
+    .card .GPN {
+        width: 45px;
+    }
+
+    .card .GoPay,
+    .card .OVO,
+    .card .Dana,
+    .card .BCA,
+    .card .mandiri,
+    .card .niaga,
+    .card .BNI,
+    .card .BRI {
+        width: 70%;
+        max-width: 80px;
+    }
+
+    .logo-box {
+        width: 95%;
+        max-width: 250px;
+    }
+}

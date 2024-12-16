@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap');
+
+.heading {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 60px;
+}
+
+.manage-menu-container h1 {
+font-family: 'Modak', cursive;
+font-size: 64px;
+margin: 0;
+color: #FFFFFF;
+}
+
+.menu-container {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 15px;
+padding: 15px;
+justify-items: center;
+}
+
+.box {
+background-color: #F3F3F3;
+border-radius: 54px;
+width: 295px;
+height: auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+padding: 20px;
+margin: 15px;
+position: relative;
+overflow: hidden;
+transition: background-color 0.3s ease;
+}
+
+.frame {
+height: auto;
+}
+
+.frame img {
+width: 100%;
+height: auto;
+border-radius: 54px;
+object-fit: cover;
+transition: opacity 0.3s ease;
+}
+
+.frame img {
+width: 222px;
+height: 146px;
+border-radius: 54px;
+object-fit: cover;
+}
+
+.menu-name {
+font-family: 'Mitr', sans-serif;
+font-size: 24px;
+text-align: center;
+color: #333;
+}
+
+.price {
+font-family: 'Mitr', sans-serif;
+font-size: 20px;
+font-weight: bold;
+color: #000000d2;
+}
+
+.edit-container {
+    padding-bottom: 10px;
+}
+                        /* RESPONSIVE DISP FUNC  */
+
+@media (max-width: 768px) {
+.menu-container {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.heading {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+}
+
+@media (max-width: 480px) {
+.menu-container {
+    grid-template-columns: 1fr;
+}
+
+.heading {
+    flex-direction: column;
+    align-items: center;
+}
+
+.total-container {
+    width: 100%;
+    justify-content: space-between;
+}
+}
+
+@media (max-width: 991.98px) {
+.nav-menu ul li .link {
+    margin: 0 10px;
+}
+
+.heading {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+}
+
+.pre-order-container {
+    width: 100%;
+    text-align: center; 
+}
+
+
+.menu-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.box {
+    width: 100%;
+    height: auto;
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+.frame img {
+    width: 100%;
+    height: auto;
+    max-width: 222px;
+}
+
+
+}
+

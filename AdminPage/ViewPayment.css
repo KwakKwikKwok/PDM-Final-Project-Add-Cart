@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap');
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 60px;
+    padding-left: 60px;
+    padding-bottom: 10px;
+}
+
+.view-history-container h1 {
+    font-family: 'Modak', cursive;
+    font-size: 64px;
+    margin: 0;
+    color: #FFFFFF;
+}
+
+.filter{
+    display: flex;
+    padding-left: 60px;
+    gap: 10px;
+}
+
+.filter-by{
+    font-size: 30px;
+    margin: 0;
+    color: #FFFFFF;
+}
+
+.dropdown-menu {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+}
+
+.dropdown-item {
+    color: #000000;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.btn-custom {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #ccc;
+    box-shadow: none !important;
+}
+
+.btn-custom:hover {
+    background-color: #f8f9fa !important;
+    color: #000000 !important;
+}
+
+.table-responsive{
+    padding: 60px;
+}
+
+.table-responsive table {
+    border-collapse: separate; 
+    border-spacing: 0;
+}
+
+.table-responsive table tr:first-child th:first-child {
+    border-top-left-radius: 20px;
+}
+
+.table-responsive table tr:first-child th:last-child {
+    border-top-right-radius: 20px;
+}
+
+.table-responsive table tr:last-child td:first-child {
+    border-bottom-left-radius: 20px;
+}
+
+.table-responsive table tr:last-child td:last-child {
+    border-bottom-right-radius: 20px;
+}
+
+.table-responsive th {
+    text-align: center;
+    font-weight: 500;
+    background-color: black;
+}
+
+.table-responsive tr {
+    text-align: center;
+}
+
+.text-success{
+    color: white !important;
+}

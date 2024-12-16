@@ -1,13 +1,11 @@
-let cart = []; // Array to store cart items
-let total = 0; // Variable to store the total price
+let cart = []; 
+let total = 0; 
 
-// Toggle the cart visibility
 function toggleCart() {
     const cartBox = document.getElementById('cartBox');
     cartBox.style.display = cartBox.style.display === 'none' ? 'block' : 'none';
 }
 
-// Function to update the quantity and add item to the cart
 function updateQuantity(event, itemName, itemPrice) {
     const quantityDisplay = document.getElementById(`quantity-${itemName}`);
     let quantity = parseInt(quantityDisplay.textContent);
@@ -20,7 +18,6 @@ function updateQuantity(event, itemName, itemPrice) {
 
     quantityDisplay.textContent = quantity;
 
-    // Add item to cart if quantity > 0, else remove it
     if (quantity > 0) {
         addItemToCart(itemName, itemPrice, quantity);
     } else {
@@ -28,46 +25,40 @@ function updateQuantity(event, itemName, itemPrice) {
     }
 }
 
-// Function to add item to the cart
 function addItemToCart(itemName, itemPrice, quantity) {
     console.log(`Adding item: ${itemName}, Price: ${itemPrice}, Quantity: ${quantity}`);
 
     const existingItemIndex = cart.findIndex(item => item.name === itemName);
     if (existingItemIndex === -1) {
-        // Add new item to the cart
         cart.push({ name: itemName, price: itemPrice, quantity: quantity });
-        total += itemPrice * quantity; // Add to the total price
+        total += itemPrice * quantity; 
     } else {
-        // Update quantity and total for existing item
         const existingItem = cart[existingItemIndex];
-        total -= existingItem.price * existingItem.quantity; // Remove old total for this item
+        total -= existingItem.price * existingItem.quantity;
         existingItem.quantity = quantity;
-        total += itemPrice * quantity; // Add new total for this item
+        total += itemPrice * quantity;
     }
 
     updateCartDisplay();
 }
 
-// Function to remove item from the cart
 function removeItemFromCart(itemName) {
     const itemIndex = cart.findIndex(item => item.name === itemName);
     if (itemIndex !== -1) {
         const item = cart[itemIndex];
-        total -= item.price * item.quantity; // Remove total for this item
-        cart.splice(itemIndex, 1); // Remove the item from the cart
+        total -= item.price * item.quantity; 
+        cart.splice(itemIndex, 1);
         updateCartDisplay();
     }
 }
 
-// Function to update the cart display
 function updateCartDisplay() {
     const cartItemsContainer = document.getElementById('cartItems');
     const totalPriceElement = document.getElementById('total-price');
-    const cartTotalDisplay = document.getElementById('cart-total-display'); // Total in the total-container
+    const cartTotalDisplay = document.getElementById('cart-total-display');
 
-    cartItemsContainer.innerHTML = ''; // Clear the cart items container
+    cartItemsContainer.innerHTML = '';
 
-    // Loop through each item in the cart array and display it
     cart.forEach(item => {
         const cartItemElement = document.createElement('div');
         cartItemElement.classList.add('cart-item');
@@ -85,8 +76,14 @@ function updateCartDisplay() {
         cartItemsContainer.appendChild(cartItemElement);
     });
 
-    // Update the total price display in both cart box and total-container
     const formattedTotal = `Rp ${total}`;
-    totalPriceElement.innerText = formattedTotal; // In the cart box
-    cartTotalDisplay.textContent = formattedTotal; // In the total-container
+    totalPriceElement.innerText = formattedTotal;
+    cartTotalDisplay.textContent = formattedTotal;
 }
+
+document.querySelector('.make-order-btn').addEventListener('click', function(event) {
+    if (cart.length === 0) {
+        event.preventDefault();
+        alert("Your cart is empty! Please add items to your cart before proceeding.");
+    }
+});
