@@ -1,11 +1,13 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const submitBtn = document.getElementById("submitBtn");
+    const usernameField = document.querySelector('input[name="username"]');
+    const passwordField = document.querySelector('input[name="password"]');
+    const togglePassword = document.getElementById("togglePassword");
+    const eyeIcon = document.getElementById("eyeIcon");
 
     submitBtn.addEventListener("click", (e) => {
         e.preventDefault();
 
-        const usernameField = document.querySelector('input[name="username"]');
-        const passwordField = document.querySelector('input[name="password"]');
         const username = usernameField.value;
         const password = passwordField.value;
 
@@ -17,14 +19,16 @@ document.addEventListener("DOMContentLoaded", function() {
             passwordField.value = "";
         }
     });
+
+    togglePassword.addEventListener("click", function () {
+        const isPassword = passwordField.type === "password";
+        passwordField.type = isPassword ? "text" : "password";
+
+        if (isPassword) {
+            eyeIcon.src = "Assets/Icon/Eye-close.png";
+        } else {
+            eyeIcon.src = "Assets/Icon/Eye-open.png";
+        }
+    });
 });
 
-const togglePassword = document.getElementById("toggle-password");
-const passwordField = document.querySelector('input[name="password"]');
-
-togglePassword.addEventListener("click", function() {
-    const type = passwordField.type === "password" ? "text" : "password";
-    passwordField.type = type;
-
-    togglePassword.textContent = type === "password" ? "🐵" : "🙈";
-});
