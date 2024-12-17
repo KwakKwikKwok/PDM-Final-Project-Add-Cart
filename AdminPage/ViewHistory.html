@@ -315,26 +315,7 @@
             crossorigin="anonymous"
         ></script>
 
-        <script>
-           function updateButtonClass(buttonId, status) {
-    // Get the button element
-    var button = document.getElementById(buttonId);
-
-    // Update the button's text
-    button.innerText = status;
-
-    // You can add additional logic here to change the button's class or add styles based on the status
-    // For example, you can change the color based on the status:
-    if (status === 'Delivered') {
-        button.classList.remove('btn-danger');
-        button.classList.add('btn-info'); // Green for delivered
-    } else {
-        button.classList.add('btn-danger'); // Red for not delivered
-    }
-}
-
-        </script>
-
+        <script src="DeliveryStatusUpdate.js"></script>
         <script src="Navbar.js"></script>
     </body>
 </html>
