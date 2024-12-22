@@ -9,3 +9,10 @@ function verifyPayment(button) {
         button.parentElement.innerHTML = "<span class='text-success'>Approved</span>";
     }
 }
+
+function cancelPayment(button) {
+    let isConfirmed = confirm("Are you sure you want to cancel this payment?");
+    if (isConfirmed) {
+        button.parentElement.innerHTML = "<span class='text-success'>Cancelled</span>";
+    }
+}
