@@ -75,6 +75,27 @@ color: #000000d2;
 .edit-container {
     padding-bottom: 10px;
 }
+
+.add-button { 
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px; 
+    height: 60px; 
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000; 
+}
+
+.add-button:hover {
+    background-color: #f0f0f0;
+}
+
                         /* RESPONSIVE DISP FUNC  */
 
 @media (max-width: 768px) {
