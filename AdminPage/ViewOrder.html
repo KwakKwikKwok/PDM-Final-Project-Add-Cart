@@ -14,7 +14,7 @@
         crossorigin="anonymous"
         />
         <link rel="stylesheet" href="NavbarAdmin.css" />
-        <link rel="stylesheet" href="ViewHistory.css" />
+        <link rel="stylesheet" href="ViewOrder.css" />
         <link rel="icon" href="../Assets/Logo/Logo-Tab.png" type="image/png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,39 +54,40 @@
             </div>
             <div class="filter">
                 <h2 class="filter-by">Filter by:</h2>
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" id="monthDropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Month
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item" href="#" onclick="updateButtonText('monthDropdown', 'January')">January</a></li>
-                        <li><a class="dropdown-item" href="#" onclick="updateButtonText('monthDropdown', 'February')">February</a></li>
-                        <li><a class="dropdown-item" href="#" onclick="updateButtonText('monthDropdown', 'March')">March</a></li>
-                        <li><a class="dropdown-item" href="#" onclick="updateButtonText('monthDropdown', 'April')">April</a></li>
-                        <li><a class="dropdown-item" href="#" onclick="updateButtonText('monthDropdown', 'May')">May</a></li>
-                        <li><a class="dropdown-item" href="#" onclick="updateButtonText('monthDropdown', 'June')">June</a></li>
-                        <li><a class="dropdown-item" href="#" onclick="updateButtonText('monthDropdown', 'July')">July</a></li>
-                        <li><a class="dropdown-item" href="#" onclick="updateButtonText('monthDropdown', 'August')">August</a></li>
-                        <li><a class="dropdown-item" href="#" onclick="updateButtonText('monthDropdown', 'September')">September</a></li>
-                        <li><a class="dropdown-item" href="#" onclick="updateButtonText('monthDropdown', 'October')">October</a></li>
-                        <li><a class="dropdown-item" href="#" onclick="updateButtonText('monthDropdown', 'November')">November</a></li>
-                        <li><a class="dropdown-item" href="#" onclick="updateButtonText('monthDropdown', 'December')">December</a></li>
-                    </ul>
-                </div>
-                
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" id="yearDropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Year
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item" href="#" onclick="updateButtonText('yearDropdown', '2020')">2020</a></li>
-                        <li><a class="dropdown-item" href="#" onclick="updateButtonText('yearDropdown', '2021')">2021</a></li>
-                        <li><a class="dropdown-item" href="#" onclick="updateButtonText('yearDropdown', '2022')">2022</a></li>
-                        <li><a class="dropdown-item" href="#" onclick="updateButtonText('yearDropdown', '2023')">2023</a></li>
-                        <li><a class="dropdown-item" href="#" onclick="updateButtonText('yearDropdown', '2024')">2024</a></li>
-                    </ul>
-                </div>
+                <select id="filterMonth" class="btn btn-secondary dropdown-toggle" aria-placeholder ="Month" onchange="filterRows()">
+                    <option value="all" style="display: none;">Month</option>
+                    <option value="all">All</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+            
+                <select id="filterYear" class="btn btn-secondary dropdown-toggle" onchange="filterRows()">
+                    <option value="all" style="display: none;">Year</option>
+                    <option value="all">All</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                </select>
+            
+                <select id="filterStatus" class="btn btn-secondary dropdown-toggle" onchange="filterRows()">
+                    <option value="all" style="display: none;">Status</option>
+                    <option value="all">All</option>
+                    <option value="Delivered">Delivered</option>
+                    <option value="Not Yet Delivered">Not Yet Delivered</option>
+                    <option value="Cancelled">Cancelled</option>
+                    <option value="Not Yet Verified">Not Yet Verified</option>
+                </select>
             </div>
+            
             <div class="table-responsive">
                 <table class="table table-dark table-borderless">
                     <thead>
@@ -106,13 +107,13 @@
                         <td>121</td>
                         <td>Melisa Angel</td>
                         <td>08:30:02</td>
-                        <td>Saturday, 7 Dec</td>
-                        <td>Monday, 9 Dec</td>
+                        <td>07-12-2024</td>
+                        <td>09-12-2024</td>
                         <td>10:00:00</td>
                         <td>
                             <div class="dropdown">
-                                <button class="btn btn-danger dropdown-toggle" id="statusDropdown1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Not Yet Delivered
+                                <button class="btn btn-info dropdown-toggle" id="statusDropdown3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Delivered
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-dark">
                                     <li><a class="dropdown-item" href="#" onclick="updateButtonClass('statusDropdown1', 'Delivered')">Delivered</a></li>
@@ -128,13 +129,13 @@
                         <td>122</td>
                         <td>Ron Smith</td>
                         <td>09:10:05</td>
-                        <td>Saturday, 7 Dec</td>
-                        <td>Sunday, 8 Dec</td>
+                        <td>07-12-2024</td>
+                        <td>08-12-2024</td>
                         <td>10:00:00</td>
                         <td>
                             <div class="dropdown">
-                                <button class="btn btn-danger dropdown-toggle" id="statusDropdown2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Not Yet Delivered
+                                <button class="btn btn-info dropdown-toggle" id="statusDropdown3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Delivered
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-dark">
                                     <li><a class="dropdown-item" href="#" onclick="updateButtonClass('statusDropdown2', 'Delivered')">Delivered</a></li>
@@ -150,13 +151,13 @@
                         <td>123</td>
                         <td>Joe Ando</td>
                         <td>14:03:02</td>
-                        <td>Saturday, 7 Dec</td>
-                        <td>Sunday, 8 Dec</td>
+                        <td>07-12-2024</td>
+                        <td>08-12-2024</td>
                         <td>14:00:00</td>
                         <td>
                             <div class="dropdown">
-                                <button class="btn btn-danger dropdown-toggle" id="statusDropdown3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Not Yet Delivered
+                                <button class="btn btn-info dropdown-toggle" id="statusDropdown3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Delivered
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-dark">
                                     <li><a class="dropdown-item" href="#" onclick="updateButtonClass('statusDropdown3', 'Delivered')">Delivered</a></li>
@@ -172,8 +173,8 @@
                         <td>124</td>
                         <td>Clarine Mary</td>
                         <td>11:12:27</td>
-                        <td>Sunday, 8 Dec</td>
-                        <td>Monday, 9 Dec</td>
+                        <td>08-12-2024</td>
+                        <td>09-12-2024</td>
                         <td>10:00:00</td>
                         <td>
                             <div class="dropdown">
@@ -194,8 +195,8 @@
                         <td>125</td>
                         <td>Kevin Ando</td>
                         <td>09:08:09</td>
-                        <td>Monday, 9 Dec</td>
-                        <td>Monday, 9 Dec</td>
+                        <td>09-12-2024</td>
+                        <td>09-12-2024</td>
                         <td>10:00:00</td>
                         <td>
                             <div class="dropdown">
@@ -216,8 +217,8 @@
                         <td>126</td>
                         <td>Sam Smith</td>
                         <td>08:08:15</td>
-                        <td>Tuesday, 10 Dec</td>
-                        <td>Thursday, 12 Dec</td>
+                        <td>10-12-2024</td>
+                        <td>12-12-2024</td>
                         <td>14:00:00</td>
                         <td>
                             <div class="dropdown">
@@ -238,8 +239,8 @@
                         <td>127</td>
                         <td>Angie Larry</td>
                         <td>13:14:45</td>
-                        <td>Tuesday, 10 Dec</td>
-                        <td>Thursday, 12 Dec</td>
+                        <td>10-12-2024</td>
+                        <td>12-12-2024</td>
                         <td>14:00:00</td>
                         <td>
                             <div class="dropdown">
@@ -260,20 +261,10 @@
                         <td>128</td>
                         <td>Rosie Mary</td>
                         <td>15:25:58</td>
-                        <td>Wednesday, 11 Dec</td>
-                        <td>Friday, 13 Dec</td>
+                        <td>11-12-2024</td>
+                        <td>13-12-2024</td>
                         <td>10:00:00</td>
-                        <td>
-                            <div class="dropdown">
-                                <button class="btn btn-danger dropdown-toggle" id="statusDropdown8" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Not Yet Delivered
-                                </button>
-                                <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="#" onclick="updateButtonClass('statusDropdown8', 'Delivered')">Delivered</a></li>
-                                    <li><a class="dropdown-item" href="#" onclick="updateButtonClass('statusDropdown8', 'Not Yet Delivered')">Not Yet Delivered</a></li>
-                                </ul>
-                            </div>
-                        </td>
+                        <td>Cancelled</td>
                         <td>
                             <button type="button" class="btn btn-primary">View Order</button>
                         </td>
@@ -282,20 +273,10 @@
                         <td>129</td>
                         <td>Susie Rose</td>
                         <td>13:10:33</td>
-                        <td>Saturday, 7 Dec</td>
-                        <td>Friday, 13 Dec</td>
+                        <td>07-12-2024</td>
+                        <td>13-12-2024</td>
                         <td>10:00:00</td>
-                        <td>
-                            <div class="dropdown">
-                                <button class="btn btn-danger dropdown-toggle" id="statusDropdown9" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Not Yet Delivered
-                                </button>
-                                <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="#" onclick="updateButtonClass('statusDropdown9', 'Delivered')">Delivered</a></li>
-                                    <li><a class="dropdown-item" href="#" onclick="updateButtonClass('statusDropdown9', 'Not Yet Delivered')">Not Yet Delivered</a></li>
-                                </ul>
-                            </div>
-                        </td>
+                        <td>Not Yet Verified</td>
                         <td>
                             <button type="button" class="btn btn-primary">View Order</button>
                         </td>
@@ -315,7 +296,8 @@
             crossorigin="anonymous"
         ></script>
 
-        <script src="DeliveryStatusUpdate.js"></script>
         <script src="Navbar.js"></script>
+        <script src="DeliveryStatusUpdate.js"></script>
+        <script src="Filter.js"></script>
     </body>
 </html>
